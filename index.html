@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+  <title>Lista de compras</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header class="desktop-only-flex">
+        <img src="assets/logo.svg" alt="Logo">
+        <h1>quicklist</h1>
+    </header>
+    <main>
+      <a href="#">
+        ← Voltar 
+      </a>
+      <form>
+        <label for="item" class="title">Compras da semana</label>
+          <div class="add-item">
+            <input 
+            id="item" 
+            type="text" 
+            name="item" 
+            placeholder="Adicione um novo item">
+
+          <button type="submit" id="add-item">Adicionar item</button>
+        </div>
+        <ul>
+          <li>
+            <input type="checkbox" id="item1">
+            <label for="item1">Pão de forma</label>
+            <button>
+              <img src="assets/trash.svg" alt="Deletar item">
+            </button>       
+          </li>
+          <li>
+            <input type="checkbox" id="item2">
+            <label for="item2">Café preto</label>
+            <button>
+              <img src="assets/trash.svg" alt="Deletar item">
+            </button>       
+          </li>
+          <li>
+            <input type="checkbox" id="item3">
+            <label for="item3">Suco de laranja</label>
+            <button>
+              <img src="assets/trash.svg" alt="Deletar item">
+            </button>       
+          </li>
+          <li>
+            <input type="checkbox" id="item4">
+            <label for="item4">Bolacha</label>
+            <button>
+              <img src="assets/trash.svg" alt="Deletar item">
+            </button>
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer class="hide">
+      <img src="assets/remove.svg" alt="">
+      <span>O item foi removido da lista</span>
+      <button>
+        <img src="assets/close.svg" alt="">
+      </button>
+    </footer>
+  </div>
+</body>
+</html>
