@@ -194,6 +194,11 @@ ul{
           transform: scale(.8);
         }
     }
+
+    input[type="checkbox"]:checked + label {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
       
     & label{
         font: var(--paragraph);
