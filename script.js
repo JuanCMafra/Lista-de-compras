@@ -1,8 +1,8 @@
 const item = document.getElementById("item")
 const list = document.querySelector("ul")
-const btn = document.getElementById("add-item")
+const form = document.getElementById("allForm")
 
-btn.addEventListener("click", function (e) {
+form.addEventListener("submit", function (e) {
   e.preventDefault()
   addItem()
 })
