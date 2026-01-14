@@ -2,15 +2,12 @@ const item = document.getElementById("item")
 const list = document.querySelector("ul")
 const btn = document.getElementById("add-item")
 
-btn.addEventListener("click", addItem)
+btn.addEventListener("click", function (e) {
+  e.preventDefault()
+  addItem()
+})
 
 let counter = 0
-
-item.addEventListener("keydown", function (e) {
-  if (e.key === "enter") {
-    addItem();
-  }
-});
 
 function addItem() {
 
