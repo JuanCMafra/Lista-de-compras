@@ -65,6 +65,18 @@ header {
   }
 }
 
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--border-hover);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-brand);
+}
+
 a{
   display: block;
   text-decoration: none;
@@ -141,9 +153,11 @@ a{
 
 ul{
   width: 100%;
+  max-height: 250px;
   display: flex;
   flex-direction: column;
   gap: .75rem;
+  overflow-y: scroll;
 
   & li{
     display: flex;
@@ -206,7 +220,7 @@ ul{
 }
 
 footer{
-  display: flex;
+  display: none;
   align-items: center;
   margin-top: 2rem;
   padding: .75rem;
