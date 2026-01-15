@@ -1,4 +1,3 @@
-const item = document.getElementById("item")
 const list = document.querySelector("ul")
 const form = document.getElementById("allForm")
 
@@ -18,6 +17,16 @@ if (item === "") {
   return
 }
 
+if (item.length > 50) {
+  alert("O item é muito longo. Por favor, insira um item com até 50 caracteres.")
+  return
+}
+
+if (list.textContent.includes(item)) {
+  alert("Este item já está na lista.")
+  return
+}
+
 counter++
 
 const newItem = document.createElement("li")
@@ -28,6 +37,7 @@ const deleteIcon = document.createElement("img")
 
 deleteButton.onclick = function() {
   list.removeChild(newItem)
+  cleanMessage()
 }
 
 const itemId = `item${counter}`
@@ -44,4 +54,21 @@ deleteButton.appendChild(deleteIcon)
 
 
 document.getElementById("item").value = ""
+}
+
+let messageTimeout
+
+function cleanMessage() {
+  const message = document.querySelector("footer")
+  const close = document.querySelector("footer button")
+  message.classList.add("show")
+
+  close.onclick = function() {
+    message.classList.remove("show")
+    clearTimeout(messageTimeout)
+  }
+  clearTimeout(messageTimeout)
+    messageTimeout = setTimeout(() => {
+    message.classList.remove("show")
+  }, 2000)
 }
